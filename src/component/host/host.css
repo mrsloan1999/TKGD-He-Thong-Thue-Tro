@@ -1,0 +1,11 @@
+.host-container {
+    width: 90% !important;
+    max-width: 100% !important;
+}
+
+@media screen and (max-width: 1400px) {
+    .host-container {
+        width: 100% !important;
+        max-width: 100% !important;
+    }    
+}
