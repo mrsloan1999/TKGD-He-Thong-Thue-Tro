@@ -20,7 +20,7 @@ export default function ImageSlick(props) {
                 images.map((item, index) => {
                     return (
                         <div key={index} className="room-box-img">
-                            <Image src={`${CLOUD_IMG}/${item.name}`} fluid/>
+                            <Image src={/^https/.test(item) ? item: `${CLOUD_IMG}/${item}`} fluid/>
                         </div>
                     )
                 })
