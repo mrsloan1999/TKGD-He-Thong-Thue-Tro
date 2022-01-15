@@ -8,7 +8,7 @@ import Card from 'react-bootstrap/Card';
 import NumberFormat from "react-number-format";
 import Button from 'react-bootstrap/Button';
 import {  CLOUD_IMG } from "../../config/index";
-
+import Map from '../map';
 
 const RoomDetail = (props) => {
     const {match} = props;
@@ -157,6 +157,7 @@ const RoomDetail = (props) => {
                             : ''
                     }
 
+                    <Map style={{height:"1000px"}}/>
                 </div>
             </Col>
             <Col>
