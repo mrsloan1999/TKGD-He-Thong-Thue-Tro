@@ -5,7 +5,10 @@ import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row'
 import Card from 'react-bootstrap/Card';
+import NumberFormat from "react-number-format";
 import Button from 'react-bootstrap/Button';
+import {  CLOUD_IMG } from "../../config/index";
+
 
 const RoomDetail = (props) => {
     const {match} = props;
@@ -14,6 +17,7 @@ const RoomDetail = (props) => {
     const [isFavourite,setFavourite] = useState(false);
 
     const [room, setRoom] = useState({});
+    const [rooms,setRooms] = useState([]);
 
     useEffect(() => {
         if (id >= 0) {
@@ -40,6 +44,23 @@ const RoomDetail = (props) => {
         }
     }, []);
 
+    useEffect(async ()=>{
+      await  fetchRooms();
+    },[]);
+
+    async function fetchRooms(){
+        await fetch(API_URL + "room", { method: 'GET' }).then((response) => {
+            if (response.ok) {
+                return response.json();
+            }
+            throw response;
+        }).then(data => {
+            setRooms(data);
+        }).catch((error) => {
+            return error;
+        });
+    }
+
     function showFullPhone(){
         setShowPhone(true);
     }
@@ -54,6 +75,14 @@ const RoomDetail = (props) => {
         textAlign:'center',
         alignSelf: 'center',
         marginTop:'2rem'
+    }
+
+    const styelCardImageRoom = {
+        width: '90%',
+        height: '200px',
+        textAlign:'center',
+        alignSelf: 'center',
+        marginTop:'1rem'
     }
 
     const styleButton = {
@@ -149,6 +178,45 @@ const RoomDetail = (props) => {
                     </Card.Body>
                 </Card>:''
                 }
+                <div className="">
+                <div>
+                    {rooms.filter(val => val.status === 1 && parseFloat(val.id) !== parseFloat(id)).slice(0,5).map((item, i) => {
+                        let img = "no-img.png";
+                        if (typeof item.image !== 'undefined' && item.image.length) {
+                            if (typeof item.image[0].name !== 'undefined') {
+                                img = item.image[0].name;
+                            }
+                        }
+                        return (
+                            <div key={i}>
+                                <Card style={{margin:'5px'}}>
+                                    <Card.Img variant="top"
+                                        src={`${CLOUD_IMG}${img}`} style={styelCardImageRoom}/>
+                                    <Card.Body>
+                                        <Card.Title>{item.address && item.address}</Card.Title>
+                                        <Card.Text>
+                                            {item.addition_infor && item.addition_infor} <br />
+                                            Giá: <span className="fw-bold"><NumberFormat value={item.price} displayType={'text'} thousandSeparator={true} /> (VND)</span> <br />
+                                            {item.district.name &&
+                                                <>
+                                                    {item.district.prefix}: {item.district.name} <br />
+                                                </>
+                                            }
+                                            {item.ward.name &&
+                                                <>
+                                                    {item.ward.prefix}: {item.ward.name} <br />
+                                                </>
+                                            }
+                                            {item.province && item.province.name}
+                                        </Card.Text>
+                                        <a href={`/room/${item.id}`} className="cs-btn-detail btn btn-default text-white">Chi tiết</a>
+                                    </Card.Body>
+                                </Card>
+                            </div>
+                        );
+                    })}
+                </div>
+            </div>
             </Col>
             </Row>
         </Container>
