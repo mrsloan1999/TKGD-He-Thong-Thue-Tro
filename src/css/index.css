@@ -1,7 +1,11 @@
 :root {
-    --yellow-color: #f9d28e;
-    --pink-color: #f39186;
-    --dark-pink-color: #f37164;
+    /* --yellow-color: #f9d28e; */
+    /* --pink-color: #f39186;
+    --dark-pink-color: #f37164; */
+
+    --yellow-color: #3499FF;
+    --pink-color: #6EE2F5;
+    --dark-pink-color: #6454F0;
 }
 body {
     margin: 0;
@@ -18,11 +22,13 @@ code {
 }
 
 .nav .nav-item:hover {
-    background-color: #f9d28e;
+    /* background-color: #f9d28e; */
+    background-color: #6EE2F5;
 }
 
 .nav .nav-item:hover a {
-    color: #f37164 !important;
+    /* color: #f37164 !important; */
+    color: #FF9482 !important;
 }
 
 .nav .nav-item.active a {
@@ -209,7 +215,8 @@ code {
 @media (min-width: 992px) {
     .search-sec {
         position: relative;
-        background: rgba(245, 175, 138, 0.27);
+        /* background: rgba(245, 175, 138, 0.27); */
+        background: #DFE9F5;
     }
 }
 

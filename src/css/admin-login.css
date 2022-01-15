@@ -1,7 +1,11 @@
 :root {
-    --yellow-color: #f9d28e;
-    --pink-color: #f39186;
-    --dark-pink-color: #f37164;
+    /* --yellow-color: #f9d28e; */
+    /* --pink-color: #f39186;
+    --dark-pink-color: #f37164; */
+
+    --yellow-color: #3499FF;
+    --pink-color: #6EE2F5;
+    --dark-pink-color: #6454F0;
 }
 body,
 html {

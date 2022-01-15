@@ -84,7 +84,7 @@ const Menu = (props) => {
         <div className="bg-light shadow">
             <Nav defaultActiveKey="/home" as="ul" className="container justify-content-between">
                 <div className="logo">
-                    <a href="/"><img src="/NTVN-logo.png" width="70" className="p-2"/></a>
+                    <a href="/"><img src="/logo.png" width="70" className="p-2"/></a>
                 </div>
                 <div className="d-flex">
                     {showMenus(menus)}
