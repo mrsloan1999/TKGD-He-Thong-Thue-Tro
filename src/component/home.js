@@ -221,7 +221,7 @@ function Home() {
                                         </select>
                                     </div>
                                     <div className="col-lg-3 col-12 p-0">
-                                        <select className="form-control search-slt" id="province" onChange={(e) => handleSelectDistrict(e.target.value)}>
+                                        <select className="form-control search-slt" id="district" onChange={(e) => handleSelectDistrict(e.target.value)}>
                                             <option value="">Chọn quận huyện</option>
                                             {
                                                 districts.map((item, index) => {
@@ -232,8 +232,8 @@ function Home() {
                                         </select>
                                     </div>
                                     <div className="col-lg-3 col-12 p-0">
-                                        <select className="form-control search-slt" id="province" onChange={(e) => handleSelectWard(e.target.value)}>
-                                            <option value="">Chọn quận huyện</option>
+                                        <select className="form-control search-slt" id="ward" onChange={(e) => handleSelectWard(e.target.value)}>
+                                            <option value="">Chọn phường xã</option>
                                             {
                                                 wards.map((item, index) => {
                                                     return <option key={index}
@@ -243,7 +243,7 @@ function Home() {
                                         </select>
                                     </div>
                                     <div className="col-lg-3 col-12 p-0">
-                                        <button onClick={(e) => handleSearchByPlaces()} type="button" className="btn bg-gradient btn-danger wrn-btn">Search
+                                        <button onClick={(e) => handleSearchByPlaces()} type="button" className="btn bg-gradient btn-danger wrn-btn">Tìm kiếm
                                         </button>
                                     </div>
                                 </div>
