@@ -208,10 +208,15 @@ code {
 
 .room-items .cs-btn-detail {
     position: absolute;
-    bottom: 1rem;
+    bottom: 0.2rem;
 }
 
-
+.card-title{
+    font-weight: 700 !important;
+}
+.card-text{
+    font-style: italic;
+}
 @media (min-width: 992px) {
     .search-sec {
         position: relative;

@@ -691,7 +691,7 @@ function Room() {
             <Card>
                 <Card.Header className="d-flex justify-content-between align-items-center">
                     <div className="bold">Danh sách nhà</div>
-                    <button onClick={onShowNew} className="btn btn-sm btn-success">Thêm</button>
+                    <button onClick={onShowNew} className="btn btn-sm btn-success">Thêm + </button>
                 </Card.Header>
                 <Card.Body>
                     <div style={{ height: '650px', width: '100%' }}>
@@ -861,7 +861,7 @@ function Room() {
                 <Modal.Body>
                     <Form.Group className="mb-3" controlid="">
                         <Form.Label>Địa chỉ</Form.Label>
-                        <Form.Control type="text" placeholder="Nhập địa chỉ" onChange={(e) => {
+                        <Form.Control type="text" placeholder="Nhập địa chỉ, (Số Nhà Và Đường) (Ví dụ: 123, Nguyễn Đình Chiểu)" onChange={(e) => {
                             setFormData({ ...formData, address: e.target.value });
                             setFormErrorMessageToFalse();
                         }} />
@@ -932,7 +932,7 @@ function Room() {
                         </Col>
                         <Col className="mb-3" controlid="">
                             <Form.Label>Giá (VND)</Form.Label>
-                            <Form.Control type="number" placeholder="Nhập giá" onChange={(e) => {
+                            <Form.Control type="number" placeholder="Nhập giá (ví dụ 12000000)" onChange={(e) => {
                                 setFormData({ ...formData, price: parseInt(e.target.value) });
                                 setFormErrorMessageToFalse();
                             }} />
@@ -944,7 +944,7 @@ function Room() {
                     </Row>
                     <Form.Group className="mb-3" controlid="">
                         <Form.Label>Diện tích (m2)</Form.Label>
-                        <Form.Control type="number" placeholder="Nhập diện tich" onChange={(e) => {
+                        <Form.Control type="number" placeholder="Nhập diện tich (ví dụ: 4)" onChange={(e) => {
                             setFormData({ ...formData, area: parseInt(e.target.value) });
                             setFormErrorMessageToFalse();
                         }} />
@@ -955,7 +955,7 @@ function Room() {
                     </Form.Group>
                     <Form.Group>
                         <Form.Label>Thông tin khác</Form.Label>
-                        <Form.Control as="textarea" rows={5} placeholder="Nhập thông tin khác" onChange={(e) => {
+                        <Form.Control as="textarea" rows={5} placeholder="Nhập thông tin khác (Nhà Gần đâu, đường xá, hàng xóm...)" onChange={(e) => {
                             setFormData({ ...formData, addition_infor: e.target.value });
                             setFormErrorMessageToFalse();
                         }} />
@@ -973,7 +973,7 @@ function Room() {
                     </Form.Group> */}
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant="secondary" onClick={hideNewModal}>
+                    <Button variant="danger" onClick={hideNewModal}>
                         Đóng
                     </Button>
                     <Button type="submit" variant="primary" onClick={submitRoom}>
