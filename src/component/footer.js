@@ -36,11 +36,11 @@ const Footer = (props) => {
                 <div className="row justify-content-center py-5">
                     <div className="col-11">
                         <div className="row ">
-                            <div className="col-lg-4 col-12 my-auto mx-auto a">
-                                <h3 className="text-muted mb-md-0 mb-5 bold-text">Nhà Trọ VN.</h3>
+                            <div className="col-lg-6 col-12 my-auto mx-auto a">
+                                <h1 className="text-pink mb-md-0 mb-5 bold-text">Nhà Trọ VN.</h1>
                             </div>
-                            <div className="col-lg-4 col-12">
-                                <h6 className="mb-3 mb-lg-4 bold-text text-muted"><b>MENU</b></h6>
+                            <div className="col-lg-3 col-12">
+                                <h6 className="mb-3 mb-lg-4 bold-text text-pink"><b>MENU</b></h6>
                                 <ul className="list-unstyled">
                                     {
                                         menus.map((item, index) => {
@@ -51,16 +51,16 @@ const Footer = (props) => {
                                     }
                                 </ul>
                             </div>
-                            <div className="col-lg-4 col-12">
-                                <h6 className="mb-3 mb-lg-4 text-muted bold-text mt-sm-0 mt-5"><b>ĐỊA CHỈ</b></h6>
+                            <div className="col-lg-3 col-12">
+                                <h6 className="mb-3 mb-lg-4 text-pink bold-text mt-sm-0 mt-5"><b>ĐỊA CHỈ</b></h6>
                                 <p className="mb-1">227 Đ. Nguyễn Văn Cừ, Phường 4</p>
                                 <p>Quận 5, Thành phố Hồ Chí Minh</p>
                             </div>
                         </div>
                         <div className="row ">
                             <div
-                                className="col-lg-4 col-12 my-md-0 mt-5 order-sm-1 order-3 align-self-end">
-                                <p className="social text-muted mb-0 pb-0 bold-text">
+                                className="col-lg-6 col-12 my-md-0 mt-5 order-sm-1 order-3 align-self-end">
+                                <p className="social text-pink mb-0 pb-0 bold-text">
                                         <span className="mx-2">
                                             <AiFillFacebook/>
                                         </span>
@@ -74,14 +74,14 @@ const Footer = (props) => {
                                 <small className="rights"><span>&#174;</span> HCMUS Students All Rights Reserved.
                                 </small>
                             </div>
-                            <div className="col-lg-4 col-12 order-1 align-self-end ">
-                                <h6 className="mt-55 mt-2 text-muted bold-text"><b>HỖ TRỢ</b></h6>
+                            <div className="col-lg-3 col-12 order-1 align-self-end ">
+                                <h6 className="mt-55 mt-2 text-pink bold-text"><b>HỖ TRỢ</b></h6>
                                 <small>
                                     <span><AiOutlineMail/></span> contact@student.hcmus.edu.vn
                                 </small>
                             </div>
-                            <div className="col-lg-4 col-12 order-2 align-self-end mt-3 ">
-                                <h6 className="text-muted bold-text"><b>HOTLINE</b></h6>
+                            <div className="col-lg-3 col-12 order-2 align-self-end mt-3 ">
+                                <h6 className="text-pink bold-text"><b>HOTLINE</b></h6>
                                 <small>
                                     <span><AiFillPhone/></span> +89 123 4567 321
                                 </small>

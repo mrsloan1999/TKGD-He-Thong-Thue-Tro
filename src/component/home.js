@@ -99,6 +99,7 @@ function Home() {
         if (selectedCity) {
             getDistricts();
         }
+        console.log(rooms);
     }, [selectedCity]);
 
     useEffect(() => {
@@ -168,8 +169,8 @@ function Home() {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h3 className="text-white">Kênh thông tin Phòng Trọ số 1 Việt Nam</h3>
-                        <p>Kênh thông tin Phòng Trọ số 1 Việt Nam - Website đăng tin cho thuê phòng trọ, nhà nguyên căn,
+                        <h3 className="text-white text-shadow size-40px">Kênh thông tin Phòng Trọ số 1 Việt Nam</h3>
+                        <p className="text-shadow size-20px">Kênh thông tin Phòng Trọ số 1 Việt Nam - Website đăng tin cho thuê phòng trọ, nhà nguyên căn,
                             căn hộ, ở ghép nhanh, hiệu quả với 100.000+ tin đăng và 2.500.000 lượt xem mỗi tháng.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -181,8 +182,8 @@ function Home() {
                     />
 
                     <Carousel.Caption>
-                        <h3 className="text-white">Chi phí thấp, hiệu quả tối đa</h3>
-                        <p>Không phải tốn nhiều công sức và chi phí cho việc đăng tin cho thuê: từ việc phát tờ rơi, dán
+                        <h3 className="text-white text-shadow size-40px">Chi phí thấp, hiệu quả tối đa</h3>
+                        <p className="text-shadow size-20px">Không phải tốn nhiều công sức và chi phí cho việc đăng tin cho thuê: từ việc phát tờ rơi, dán
                             giấy, và đăng lên các website khác nhưng hiệu quả không cao.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -194,8 +195,8 @@ function Home() {
                     />
 
                     <Carousel.Caption>
-                        <h3 className="text-white">Bạn đang có phòng trọ / căn hộ cho thuê?</h3>
-                        <p>Không phải lo tìm người cho thuê, phòng trống kéo dài</p>
+                        <h3 className="text-white text-shadow size-40px">Bạn đang có phòng trọ / căn hộ cho thuê?</h3>
+                        <p className="text-shadow size-20px">Không phải lo tìm người cho thuê, phòng trống kéo dài</p>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
@@ -269,8 +270,10 @@ function Home() {
                                     <Card.Body>
                                         <Card.Title>{item.address && item.address}</Card.Title>
                                         <Card.Text>
-                                            {item.addition_infor && item.addition_infor} <br />
                                             Giá: <span className="fw-bold"><NumberFormat value={item.price} displayType={'text'} thousandSeparator={true} /> (VND)</span> <br />
+
+                                            {item.addition_infor && item.addition_infor} <br />
+
                                             {item.district.name &&
                                                 <>
                                                     {item.district.prefix}: {item.district.name} <br />
@@ -289,6 +292,34 @@ function Home() {
                             </div>
                         );
                     })}
+                </div>
+            </div>
+            <div className="container text-center mb-5 pb-5">
+                <div className="border-bottom mb-3 pb-3">
+                    <h3 className="fw-bold">Tại sao nên sử dụng Nhà Trọ Việt Nam?</h3>
+                </div>
+                <div className="row">
+                    <div className="col-3">
+                        <img loading="lazy" decoding="async" width="150" height="150"
+                             // style="object-fit: contain; object-position: 50% 50%;"
+                             src="https://ik.imagekit.io/tvlk/image/imageResource/2017/05/17/1495008495760-d92160ea2b56fc1128cbdff93aa43774.png?tr=h-150,q-75,w-150"/>
+                        <h5 className="fw-bold">Giải pháp tìm nhà trọ tiện dụng</h5>
+                    </div>
+                    <div className="col-3">
+                        <img importance="low" loading="lazy" decoding="async" width="150" height="150"
+                             src="https://ik.imagekit.io/tvlk/image/imageResource/2017/05/17/1495008504598-6c1d5675c41e47eee0b27c59c07a2bbd.png?tr=h-150,q-75,w-150"/>
+                        <h5 className="fw-bold">Giá rẻ hơn bất cứ đâu</h5>
+                    </div>
+                    <div className="col-3">
+                        <img importance="low" loading="lazy" decoding="async" width="150" height="150"
+                             src="https://ik.imagekit.io/tvlk/image/imageResource/2017/05/17/1495008514239-c1d0a51538cd02053c9b1a6c567fe5b5.png?tr=h-150,q-75,w-150"/>
+                        <h5 className="fw-bold">Phương thức thanh toán an toàn và linh hoạt</h5>
+                    </div>
+                    <div className="col-3">
+                        <img importance="low" loading="lazy" decoding="async" width="150" height="150"
+                             src="https://ik.imagekit.io/tvlk/image/imageResource/2017/05/17/1495008521046-3cee046bb3ddb863398300f89d83c0f9.png?tr=h-150,q-75,w-150"/>
+                        <h5 className="fw-bold">Phương thức thanh toán an toàn và linh hoạt</h5>
+                    </div>
                 </div>
             </div>
         </>

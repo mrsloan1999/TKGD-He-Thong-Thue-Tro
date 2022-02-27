@@ -14,13 +14,14 @@ export default function ImageSlick(props) {
         slidesToShow: 1,
         slidesToScroll: 1
     };
+    console.log(images);
     return (
         <Slider {...settings}>
             {
                 images.map((item, index) => {
                     return (
                         <div key={index} className="room-box-img">
-                            <Image src={/^https/.test(item) ? item: `${CLOUD_IMG}/${item}`} fluid/>
+                            <Image src={/^https/.test(item) ? item: `${CLOUD_IMG}/${item.name}`} fluid/>
                         </div>
                     )
                 })

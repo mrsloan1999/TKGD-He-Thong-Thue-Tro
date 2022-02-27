@@ -175,7 +175,7 @@ const RoomDetail = (props) => {
                         </Card.Text>
                         <Button variant="primary" disabled={isShowPhone} onClick={showFullPhone} style={styleButton}>Hiện số điện thoại</Button>
                         <Button variant={!isFavourite ? 'primary':'danger'} style={styleButton} onClick={favourite}>Yêu thích</Button>
-                        <Button variant="primary" style={styleButton}>Liên hệ</Button>
+                        <Button variant="primary" disabled={isShowPhone} onClick={showFullPhone} style={styleButton}>Liên hệ</Button>
                     </Card.Body>
                 </Card>:''
                 }
